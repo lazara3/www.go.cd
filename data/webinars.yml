@@ -1,62 +1,63 @@
 - title: Live GoCD Demo
-  date: April 12th, 11am BST - Europe/APAC/London
-  month: Apr
-  day: 12
-  url: https://info.thoughtworks.com/go_wb_registration_page_12_apr_2017.html
-  description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
-
-- title: Live GoCD Demo
-  date: April 26th, 11am BST - Europe/APAC/London
-  month: Apr
-  day: 26
-  url: https://info.thoughtworks.com/go_wb_registration_page_26_apr_2017.html
-  description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
-
-- title: Live GoCD Demo
-  date: May 10th, 11am BST - Europe/APAC/London
-  month: May
-  day: 10
-  url: https://info.thoughtworks.com/go_wb_registration_page_10_may_2017.html
-  description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
-
-- title: Live GoCD Demo
-  date: May 11th, 1pm CST - Americas
-  month: May
+  date: October 11th, 11am BST - Europe/APAC/London
+  month: Oct
   day: 11
-  url: https://info.thoughtworks.com/go_wb_registration_page_11_may_2017.html
+  url: https://info.thoughtworks.com/go_wb_registration_page_11_oct_2017.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
 
 - title: Live GoCD Demo
-  date: May 24th, 11am BST - Europe/APAC/London
-  month: May
-  day: 24
-  url: https://info.thoughtworks.com/go_wb_registration_page_24_may_2017.html
+  date: October 12th, 1pm CST - Americas
+  month: Oct
+  day: 12
+  url: https://info.thoughtworks.com/go_wb_registration_page_12_oct_2017.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
 
 - title: Live GoCD Demo
-  date: May 31st, 1pm CST - Americas
-  month: May
-  day: 31
-  url: https://info.thoughtworks.com/go_wb_registration_page_31_may_2017.html
+  date: October 25th, 11am BST - Europe/APAC/London
+  month: Oct
+  day: 25
+  url: https://info.thoughtworks.com/go_wb_registration_page_25_oct_2017.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
 
 - title: Live GoCD Demo
-  date: June 7th, 11am BST - Europe/APAC/London
-  month: Jun
-  day: 7
-  url: https://info.thoughtworks.com/go_wb_registration_page_07_jun_2017.html
+  date: November 8th, 11am GMT - Europe/APAC/London
+  month: Nov
+  day: 08
+  url: https://info.thoughtworks.com/go_wb_registration_page_08_nov_2017.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
 
 - title: Live GoCD Demo
-  date: June 21st, 11am BST - Europe/APAC/London
-  month: Jun
-  day: 21
-  url: https://info.thoughtworks.com/go_wb_registration_page_21_jun_2017.html
-  description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
-
-- title: Live GoCD Demo
-  date: June 22nd, 1pm CST - Americas
-  month: Jun
+  date: November 22nd, 11am GMT - Europe/APAC/London
+  month: Nov
   day: 22
-  url: https://info.thoughtworks.com/go_wb_registration_page_22_jun_2017.html
+  url: https://info.thoughtworks.com/go_wb_registration_page_22_nov_2017.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
+
+- title: Live GoCD Demo
+  date: November 29th, 1pm CST - Americas
+  month: Nov
+  day: 29
+  url: https://info.thoughtworks.com/go_wb_registration_page_29_nov_2017.html
+  description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
+
+- title: Live GoCD Demo
+  date: December 06th, 11am GMT - Europe/APAC/London
+  month: Dec
+  day: 06
+  url: https://info.thoughtworks.com/go_wb_registration_page_06_dec_2017.html
+  description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
+
+- title: Live GoCD Demo
+  date: December 13th, 1pm CST - Americas
+  month: Dec
+  day: 13
+  url: https://info.thoughtworks.com/go_wb_registration_page_13_dec_2017.html
+  description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
+
+- title: Live GoCD Demo
+  date: December 20th, 11am GMT - Europe/APAC/London
+  month: Dec
+  day: 20
+  url: https://info.thoughtworks.com/go_wb_registration_page_20_dec_2017.html
+  description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
+

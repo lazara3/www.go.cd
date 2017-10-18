@@ -1,4 +1,7 @@
 User-agent: *
+<% if should_show_drafts? %>
+Disallow: /
+<% else %>
 Allow: /
 
 Disallow: /next-release
@@ -9,4 +12,13 @@ Disallow: /continuous-delivery
 Disallow: /continuous-delivery/index.html
 Disallow: /continuous-delivery.html
 
+Disallow: /sales-sign-up
+Disallow: /sales-sign-up/index.html
+Disallow: /sales-sign-up.html
+
+Disallow: /glossary
+Disallow: /glossary/index.html
+Disallow: /glossary.html
+
 Sitemap: <%= config.base_url %>/sitemap.xml
+<% end %>

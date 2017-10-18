@@ -1,0 +1,84 @@
+<h4>Pipeline as Code</h4>
+
+With this release, GoCD supports [Pipeline as code](https://docs.gocd.org/current/advanced_usage/pipelines_as_code.html), out of the box. We've bundled the [JSON config repo plugin](https://github.com/tomzo/gocd-json-config-plugin) and the [YAML config repo plugin](https://github.com/tomzo/gocd-yaml-config-plugin) with the GoCD server.
+A shout out to our core contributor [Tomasz Sętkowski](https://github.com/tomzo) for maintaining these plugins.
+
+<h4>Amazon ECS Elastic Agent Plugin</h4>
+
+ThoughtWorks now offers a new commercial plugin which allows you to run elastic agents on Amazon ECS. The plugin takes care of spinning up and shutting down EC2 instances based on the need of your deployment pipeline. For more information about this, [click here](https://extensions-docs.gocd.org/ecs/current/).
+
+<h4>Improvements</h4>
+
+* <%= link_to_commit '1ccb0294265b4baea091c9068d7813fdde5009b4', 'Ensure order of auth_config is used to authenticate users', 3608 %>
+* <%= link_to_commit '36d546e680aa43c31bf29d2a586ca31e57739bde', 'Removed support for Team Foundation Server 2010. Users can continue to use GoCD with TFS 2012, 2013, 2015 and Visual Studio Team Services.' %>
+* <%= link_to_commit 'd7c4d167fc10101b03af4cd6676c806cef244747', 'Display pause text in pipeline history', 2784 %>
+* <%= link_to_commit '52ac924aad78ad2795c088199eb4c70f14b8205a', 'Save agent hostname and ip address as part of build history. This information will be displayed on the job details page for all kinds of agents.', 3368 %>
+
+<h4>Docker Images</h4>
+
+* Some improvements have been made to reduce the size of the docker GoCD [server image](https://hub.docker.com/r/gocd/gocd-server/). Please check the changelog [here](https://github.com/gocd/docker-gocd-server/blob/master/CHANGELOG.md).
+* Some improvements have been made to create slimmer docker GoCD agent images. Please check the changelog [here](https://github.com/gocd/docker-gocd-agent/blob/master/CHANGELOG.md).
+We provide support for the docker images for GoCD agents across the following operating systems - Alpine [3.5](https://hub.docker.com/r/gocd/gocd-agent-alpine-3.5/), CentOS [6](https://hub.docker.com/r/gocd/gocd-agent-centos-6/) & [7](https://hub.docker.com/r/gocd/gocd-agent-centos-7/) , Debian [7](https://hub.docker.com/r/gocd/gocd-agent-debian-7/) & [8](https://hub.docker.com/r/gocd/gocd-agent-debian-8/), Ubuntu [12.04](https://hub.docker.com/r/gocd/gocd-agent-ubuntu-12.04/), [14.04](https://hub.docker.com/r/gocd/gocd-agent-ubuntu-14.04/) & [16.04](https://hub.docker.com/r/gocd/gocd-agent-ubuntu-16.04/)
+
+<h4>Deprecations</h4>
+
+Features that become superseded or irrelevant become *deprecated*, and are scheduled to be removed in some timeframe.
+
+The following features have been deprecated. Please note the timeframe of when they will be removed.
+
+* As of 17.5, support for in-built password file and LDAP/AD authentication have been deprecated. Support for these authentication mechanisms would be removed in 17.9 release (scheduled to be released in September 2017). Existing configuration will be automatically migrated to use the new in-built password file and LDAP/AD authentication plugins. No other action necessary.
+
+* As of 17.5, authentication plugin endpoints have been deprecated. Support for this plugin will be removed in 18.1 (scheduled to be released in January 2018). Plugin developers are encouraged to migrate their plugins to use the [Authorization Plugins](https://plugin-api.gocd.org/current/authorization/) that were introduced.
+    <h5>Authentication plugins</h5>
+    <ul>
+      <li><p><%= link_to('Google OAuth Login', 'https://github.com/gocd-contrib/gocd-oauth-login') %></p></li>
+      <li><p><%= link_to('GitHub OAuth Login', 'https://github.com/gocd-contrib/gocd-oauth-login') %></p></li>
+      <li><p><%= link_to('GitLab(CE) OAuth Login', 'https://github.com/gocd-contrib/gocd-oauth-login') %></p></li>
+      <li><p><%= link_to('TLS Client Certificates Login', 'https://github.com/cnorthwood/gocd-tls-auth') %></p></li>
+      <li><p><%= link_to('Strong Auth Plugin', 'https://github.com/danielsomerfield/go-strong-auth-plugin#go-strong-auth-plugin') %></p></li>
+      <li><p><%= link_to('Guest Login', 'https://github.com/gocd-contrib/gocd_auth_plugin_guest_user') %></p></li>
+    </ul>
+
+ * As of 17.8, the phusion based docker [server](https://hub.docker.com/r/gocd/gocd-server-deprecated/) and [agent](https://hub.docker.com/r/gocd/gocd-agent-deprecated/) images are deprecated in favour of the new docker [server](https://hub.docker.com/r/gocd/gocd-server/) and agent images. Support for the phusion images will be removed in 17.11.0.
+ We provide support for the docker images for GoCD agents across the following operating systems - Alpine [3.5](https://hub.docker.com/r/gocd/gocd-agent-alpine-3.5/), CentOS [6](https://hub.docker.com/r/gocd/gocd-agent-centos-6/) & [7](https://hub.docker.com/r/gocd/gocd-agent-centos-7/) , Debian [7](https://hub.docker.com/r/gocd/gocd-agent-debian-7/) & [8](https://hub.docker.com/r/gocd/gocd-agent-debian-8/), Ubuntu [12.04](https://hub.docker.com/r/gocd/gocd-agent-ubuntu-12.04/), [14.04](https://hub.docker.com/r/gocd/gocd-agent-ubuntu-14.04/) & [16.04](https://hub.docker.com/r/gocd/gocd-agent-ubuntu-16.04/)
+
+<h4>Contributors</h4>
+
+<%= [
+  "Ankit Srivastava",
+  "Ankur K",
+  "Aravind SV",
+  "Bhupendrakumar Piprava",
+  "Emily Luke",
+  "Isabelle Carter",
+  "Huimin Li",
+  "Jyoti Singh",
+  "Ketan Padegaonkar",
+  "Kyle Olivo",
+  "Louda Peña",
+  "Lubaina R",
+  "Mahesh Panchaksharaiah",
+  "Marques Lee",
+  "Naveen Bhaskar",
+  "Rajiesh N",
+  "Senthil R",
+  "Suzie Prince",
+  "Tomasz Sętkowski",
+  "Varsha Varadarajan",
+  "Victor Nascimento"
+].sort.uniq.join(', ')
+%>
+
+<!--
+<h4>Security researchers</h4>
+
+<%= link_to('https://hackerone.com/gocd/thanks', 'https://hackerone.com/gocd/thanks') %>
+-->
+
+<h4>Note</h4>
+
+A more comprehensive list of changes for this release can be found <%= link_to_full_changelog 'here.', 'Release 17.8' %>
+
+Have ideas and want to contribute? Need some help getting started? We're here to help. Reach out to us at <%= mail_to 'support@thoughtworks.com' %>.
+
+Found a security issue that needs fixing? Please report it to <%= link_to 'https://hackerone.com/gocd', 'https://hackerone.com/gocd' %>

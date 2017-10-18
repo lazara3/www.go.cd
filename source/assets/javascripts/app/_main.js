@@ -1,16 +1,16 @@
-$(function(){
+$(function () {
   var nb = $('.navbtn');
   var n = $('.mainnav');
 
-  $(window).on('resize', function(){
+  $(window).on('resize', function () {
 
-    if($(this).width() < 570 && n.hasClass('keep-nav-closed')) {
+    if ($(this).width() < 570 && n.hasClass('keep-nav-closed')) {
       // if the nav menu and nav button are both visible,
       // then the responsive nav transitioned from open to non-responsive, then back again.
       // re-hide the nav menu and remove the hidden class
       $('.mainnav').hide().removeAttr('class');
     }
-    if(nb.is(':hidden') && n.is(':hidden') && $(window).width() > 569) {
+    if (nb.is(':hidden') && n.is(':hidden') && $(window).width() > 569) {
       // if the navigation menu and nav button are both hidden,
       // then the responsive nav is closed and the window resized larger than 560px.
       // just display the nav menu which will auto-hide at <560px width.
@@ -18,58 +18,43 @@ $(function(){
     }
   });
 
-  // $('.mainnav a,.top a,#btmnav nav a').on('click', function(e){
-  //   e.preventDefault(); // stop all hash(#) anchor links from loading
-  // });
-
-  $('.navbtn').on('click', function(e){
+  $('.navbtn').on('click', function (e) {
     e.preventDefault();
     $(".mainnav").toggleClass('open');
   });
 
 
-  $('.menu').click(function(){
+  $('.menu').click(function () {
     $(this).toggleClass('open');
-    $('.slidenav').toggleClass('open')
+    $('.slidenav').toggleClass('open');
     $('body').toggleClass('nav-open')
-  })
-
-  // fixed header
-
-  $(window).scroll(function () {
-    var sc = $(window).scrollTop()
-    if (sc > 1) {
-      $(".top").addClass("scroll-on")
-    } else {
-      $(".top").removeClass("scroll-on")
-    }
   });
+
 });
 
 // Help signup
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 
-  $('.help_cta').click(function(event) {
+  $('.help_cta').click(function (event) {
     $('.signup').slideDown('fast');
   });
-  $('.signup .close').click(function(event) {
+  $('.signup .close').click(function (event) {
     $('.signup').slideUp('fast');
   });
-
 });
 
 // getting started navigation mobile
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 
   enquire.register("screen and (max-width: 992px)", {
-    match : function() {
-      $(".get-start-btn , .getting-started-nav h5 ").click(function() {
+    match: function () {
+      $(".get-start-btn , .getting-started-nav h5 ").click(function () {
         $(".getting-started-nav").slideToggle();
       });
       $(window).scroll(function () {
-        var sc = $(window).scrollTop()
+        var sc = $(window).scrollTop();
         if (sc > 58) {
           $(".get-start-btn").addClass("fixed")
         } else {
@@ -77,24 +62,21 @@ jQuery(document).ready(function($) {
         }
       });
 
-      $('nav.getting-started-nav ul.verticalnav > li.dropdown ul a').click(function(e){
+      $('nav.getting-started-nav ul.verticalnav > li.dropdown ul a').click(function (e) {
         e.preventDefault();
-        $(".get-start-btn").removeClass("fixed")
+        $(".get-start-btn").removeClass("fixed");
         $(".getting-started-nav").slideToggle();
       });
-
-
     },
-    unmatch : function() {
-        // Hide the sidebar
-      }
-    });
+    unmatch: function () {
+      // Hide the sidebar
+    }
+  });
 });
-
 
 // back to top
 
-$(document).ready(function(){
+$(document).ready(function () {
 
   // hide #back-top first
   $(".back-top").hide();
@@ -115,42 +97,42 @@ $(document).ready(function(){
       return false;
     });
   });
-
 });
-
-
 
 //downloads  show hide old releases
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 
-
-  $(document).on('click', '.btn-release', function(){
+  $(document).on('click', '.btn-release', function () {
     $(this).closest('.tab_content').find('.old-release').slideToggle('fast');
-    $(this).text(function(i, text){
-          return text === "Show old releases" ? "Hide old releases" : "Show old releases";
-      });
-
+    $(this).text(function (i, text) {
+      return text === "Show old releases" ? "Hide old releases" : "Show old releases";
+    });
   });
 
-  $(document).on('click', '.close-message, .verify-checksum-message', function(e){
+  $(document).on('click', '.close-message, .verify-checksum-message', function (e) {
     if (e.target !== this)
-    return;
+      return;
     $('.verify-checksum-message').hide();
-      $('body').removeClass("o-h");
-     });
+    $('body').removeClass("o-h");
+  });
 
-     //image zoom popup
+  //image zoom popup
 
-   $(".imagezoom").click(function(evt){
-     var src = $(evt.currentTarget).children('img').attr('src');
-     var imagecontent = $(".imagemodalcontent");
-     imagecontent.html("<img src='" + src + "' alt='fuller image' />" )
-     $(".imagemodal").show();
-     imagecontent.scrollTop(0).scrollLeft(0);
-   });
-   $(".imagemodal .close").click(function(){
-     $(".imagemodal").hide();
-   });
+  $(".imagezoom").click(function (evt) {
+    var src = $(evt.currentTarget).children('img').attr('src');
+    var imagecontent = $(".imagemodalcontent");
+    imagecontent.html("<img src='" + src + "' alt='fuller image' />")
+    $(".imagemodal").show();
+    imagecontent.scrollTop(0).scrollLeft(0);
+  });
+  $(".imagemodal .close").click(function () {
+    $(".imagemodal").hide();
+  });
+});
 
+//why go-cd lightbox
+
+$(document).ready(function () {
+  $('.chocolat-parent').Chocolat();
 });

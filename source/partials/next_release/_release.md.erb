@@ -1,87 +1,76 @@
-#### API Enhancements
+<h4>Bundled Plugins</h4>
 
-* <%= link_to_commit 'f47d054171b07e2ce9c2efa9e02dde6979fc9c8f', "#{link_to_api 'encryption'} to encrypt secrets.", 1829 %>
+With this release GoCD provides support for [Pipleine as code](https://docs.gocd.org/current/advanced_usage/pipelines_as_code.html) through [JSON config repo plugin](https://github.com/tomzo/gocd-json-config-plugin) and the [YAML config repo plugin](https://github.com/tomzo/gocd-yaml-config-plugin). These plugins maintained by our core contributor [Tomasz Sętkowski](https://github.com/tomzo) will be bundled by default.
 
-#### Other Improvements
+<h4>Improvements</h4>
 
-* <%= link_to_commit 'xxx', 'YYY.', 123 %>
+* <%= link_to_commit '1ccb0294265b4baea091c9068d7813fdde5009b4', 'Ensure order of auth_config in config xml is used to derive the order in which plugins are used for authentication.', 3608 %>
+* <%= link_to_commit '36d546e680aa43c31bf29d2a586ca31e57739bde', 'Remove tfs-impl-10' %>
+* <%= link_to_commit 'd7c4d167fc10101b03af4cd6676c806cef244747', 'Paused pipelines shows the pause reason on the history page.', 2784 %>
+* <%= link_to_commit '52ac924aad78ad2795c088199eb4c70f14b8205a', 'Save agent hostname and ip address as part of build history. This information will be displayed on the job details page for all kinds of agents.', 3368 %>
 
-#### Bug Fixes
+<h4>Docker Images</h4>
 
-* <%= link_to_commit 'e9611f83798bd5eddd62326f0827e5055519bd4a', 'OS Detection failing for elastic agents.', 3060 %>
-* Multiple UI fixes and tweaks on the new theme that was introduced in 16.12.
-* <%= link_to_commit 'ad1a1188d15839ac4a41c91c84c631612e49bf60', 'Sort resources and environments alphabetically on agents page selector dropdown.', 3134 %>
+* Some improvements have been made to reduce the size of the docker GoCD [server image](https://hub.docker.com/r/gocd/gocd-server/). Please check the changelog [here](https://github.com/gocd/docker-gocd-server/blob/master/CHANGELOG.md).
+* Some improvements have been made to create slimmer docker GoCD agent images. Please check the changelog [here](https://github.com/gocd/docker-gocd-agent/blob/master/CHANGELOG.md).
+We provide support for the docker images for GoCD agents across the following operating systems - Centos [6](https://hub.docker.com/r/gocd/gocd-agent-centos-6/) & [7](https://hub.docker.com/r/gocd/gocd-agent-centos-7/) , Debian [7](https://hub.docker.com/r/gocd/gocd-agent-debian-7/) & [8](https://hub.docker.com/r/gocd/gocd-agent-debian-8/), Ubuntu [12.04](https://hub.docker.com/r/gocd/gocd-agent-ubuntu-12.04/), [14.04](https://hub.docker.com/r/gocd/gocd-agent-ubuntu-14.04/) & [16.04](https://hub.docker.com/r/gocd/gocd-agent-ubuntu-16.04/)
 
-#### Breaking changes
-
-* <%= link_to_commit 'xxx', 'YYY', 456 %>
-
-#### Deprecations
+<h4>Deprecations</h4>
 
 Features that become superseded or irrelevant become *deprecated*, and are scheduled to be removed in some timeframe.
 
-The following features have been deprecated, along with the timeframe when they will be removed.
+The following features have been deprecated. Please note the timeframe of when they will be removed.
 
-* We shall be stopping support for git versions older than 1.9 in three months time (Feb 2017). Users are recommended to upgrade git on the GoCD server and agents (if git is used as a material). We are aware that the linux distributions have an older version of git installed by default. Please refer to [this](https://www.softwarecollections.org/en/scls/rhscl/git19/) and/or [this](http://askubuntu.com/questions/571549/git-1-7-9-5-upgrade-to-current-release-of-git-2-x-on-ubuntu-12-04/571633#571633) to upgrade git.
-* As of release 16.12, version 1 of the <%= link_to_api 'get-all-plugin-info', 'Plugin Info API' %> is deprecated. This version of the API will be removed in 17.2 release (scheduled to be released in Feb 2017). Version 2 of the API is available, and users are encouraged to use it.
-* As of release 16.12, version 2 of the <%= link_to_api 'pipeline-config', 'Pipeline Config API' %> is deprecated. This version of the API will be removed in 17.2 release (scheduled to be released in Feb 2017). Version 3 of this API is backward compatible, and users are encouraged to use it.
-* As of release 16.7, Java API based Go Plugins have been deprecated. Support for running these plugins will be removed in 17.1 (scheduled to be released in January 2017). Plugin developers are encouraged to upgrade their plugins to use [JSON message based plugin API.](https://plugin-api.gocd.io/current/tasks) to build plugins.
+* Support for in-built password file and LDAP/AD authentication have been deprecated as of this release. Support for these authentication mechanisms would be removed in 17.9 release (scheduled to be released in September 2018).
 
-    Below is the list of plugins that will stop working in 17.1.
+* The [Authorization Plugin](https://plugin-api.gocd.org/current/authorization/) endpoints were introduced as an extension to the existing Authentication Plugin endpoints, with this we are deprecating the Authentication Plugin endpoint. Support for this plugin would be removed in 18.1 (scheduled to be release in January 2018). Plugin developers are encouraged to migrate their plugins to use the new Authorization Plugins.
+    <h5>Authentication plugins</h5>
+    <ul>
+      <li><p><%= link_to('Google OAuth Login', 'https://github.com/gocd-contrib/gocd-oauth-login') %></p></li>
+      <li><p><%= link_to('GitHub OAuth Login', 'https://github.com/gocd-contrib/gocd-oauth-login') %></p></li>
+      <li><p><%= link_to('GitLab(CE) OAuth Login', 'https://github.com/gocd-contrib/gocd-oauth-login') %></p></li>
+      <li><p><%= link_to('TLS Client Certificates Login', 'https://github.com/cnorthwood/gocd-tls-auth') %></p></li>
+      <li><p><%= link_to('Strong Auth Plugin', 'https://github.com/danielsomerfield/go-strong-auth-plugin#go-strong-auth-plugin') %></p></li>
+      <li><p><%= link_to('Guest Login', 'https://github.com/gocd-contrib/gocd_auth_plugin_guest_user') %></p></li>
+    </ul>
 
-    **Note:** The GoCD team has built a [shim](https://github.com/aresok/go-maven-poller/compare/master...arvindsv:make-it-work-with-gocd-17-1) that allows migration of all plugins with minimal change. We are actively working with plugin authors to ensure that these plugins are migrated over in time for 17.1.
+ * As of 17.8, the phusion based docker [server](https://hub.docker.com/r/gocd/gocd-server-deprecated/) and [agent](https://hub.docker.com/r/gocd/gocd-agent-deprecated/) images are deprecated in favour of the new docker [server](https://hub.docker.com/r/gocd/gocd-server/) and agent images. Support for the phusion images will be removed in 17.11.0.
+ We provide support for the docker images for GoCD agents across the following operating systems - Centos [6](https://hub.docker.com/r/gocd/gocd-agent-centos-6/) & [7](https://hub.docker.com/r/gocd/gocd-agent-centos-7/) , Debian [7](https://hub.docker.com/r/gocd/gocd-agent-debian-7/) & [8](https://hub.docker.com/r/gocd/gocd-agent-debian-8/), Ubuntu [12.04](https://hub.docker.com/r/gocd/gocd-agent-ubuntu-12.04/), [14.04](https://hub.docker.com/r/gocd/gocd-agent-ubuntu-14.04/) & [16.04](https://hub.docker.com/r/gocd/gocd-agent-ubuntu-16.04/)
 
-    **Package plugins**
-
-    * [Maven (Nexus) repository poller](https://github.com/aresok/go-maven-poller)
-    * [Docker Registry Poller - 1](https://github.com/hammerdr/go-docker-registry-poller)
-    * [Docker Registry Poller - 2](https://github.com/decoomanj/gocd-docker-material-poller)
-    * [Puppet Forge repository poller](https://github.com/drrb/go-puppet-forge-poller)
-    * [Debian repository poller](https://github.com/gocd-contrib/deb-repo-poller)
-    * [Cloud Foundry poller](https://github.com/Sounie/springer-gocd-cloudfoundry-plugin/blob/master/README.md)
-
-    **Task plugins**
-
-    * [MSBuild Task](https://github.com/akanyer/gocd-msbuild-taskplugin/blob/master/README.md)
-    * [XUnit Converter](https://github.com/gocd-contrib/xunit-converter-task)
-    * [Publish to S3](https://github.com/indix-eng/gocd-s3-artifacts)
-    * [Fetch from S3](https://github.com/indix-eng/gocd-s3-artifacts)
-    * [Powershell Task](https://github.com/manojlds/gocd-powershell-runner/blob/master/README.md)
-    * [RapidDeploy Package Builder](https://github.com/MidVision/go-rapiddeploy/wiki#rapiddeploy-package-repository-plugin)
-    * [RapidDeploy Job Runner](https://github.com/MidVision/go-rapiddeploy/wiki#rapiddeploy-job-runner-task-plugin)
-    * [Maven Task Plugin](https://github.com/ruckc/gocd-maven-plugin)
-    * [Publish to Artifactory](https://github.com/tusharm/go-artifactory-plugin)
-
-
-#### Contributors
+<h4>Contributors</h4>
 
 <%= [
-  'Alison Polton-Simon',
-  'Aravind SV',
-  'Bhupendrakumar Piprava',
-  'Ganesh S Patil',
-  'Jyoti Singh',
-  'Ketan Padegaonkar',
-  'Mahesh Panchaksharaiah',
-  'Markandan R',
-  'Naveen Bhaskar',
-  'Padma Mullagiri',
-  'Rajiesh Narayanan',
-  'Sallie Walecka',
-  'Sumanth Kumar Mora',
-  'Tomasz Setkowski',
-  'Varsha Varadarajan',
-  'Zabil Cheriya Maliackal',
+  "Ankit Srivastava",
+  "Ankur K",
+  "Aravind SV",
+  "Bhupendrakumar Piprava",
+  "Emily Luke",
+  "Isabelle Carter",
+  "Huimin Li",
+  "Jyoti Singh",
+  "Ketan Padegaonkar",
+  "Kyle Olivo",
+  "Louda Peña",
+  "Lubaina R",
+  "Mahesh Panchaksharaiah",
+  "Marques Lee",
+  "Rajiesh N",
+  "Senthil R",
+  "Suzie Prince",
+  "Varsha Varadarajan",
+  "Victor Nascimento"
 ].sort.uniq.join(', ')
 %>
 
-#### Security researchers
+<!--
+<h4>Security researchers</h4>
 
 <%= link_to('https://hackerone.com/gocd/thanks', 'https://hackerone.com/gocd/thanks') %>
+-->
 
-#### Note
+<h4>Note</h4>
 
-A more comprehensive list of changes for this release can be found <%= link_to_full_changelog 'here.', 'Release 17.1' %>
+A more comprehensive list of changes for this release can be found <%= link_to_full_changelog 'here.', 'Release 17.8' %>
 
 Have ideas and want to contribute? Need some help getting started? We're here to help. Reach out to us at <%= mail_to 'support@thoughtworks.com' %>.
 

@@ -34,7 +34,7 @@ REDIRECTS = {
   "contribute/contribution-guide.html"         => "/contribute/index.html",
   "learn-more/why-go.html"                     => "/why-gocd/index.html",
   "cla/index.html"                             => "/contributor-license-agreement/index.html",
-  "documentation/index.html"                   => "https://docs.gocd.io",
+  "documentation/index.html"                   => "https://docs.gocd.org",
   "support/index.html"                         => "https://www.thoughtworks.com/go",
   "infoq/index.html"                           => "/index.html?utm_campaign=infoq_2016_q4&utm_medium=podcast_infoq&utm_source=podcast_infoq&utm_content=go_download&utm_term=",
   "changelog/index.html"                       => "/index.html?utm_campaign=the_changelog_2016&utm_medium=podcast&utm_source=podcast_audio&utm_content=go_download&utm_term=",
@@ -45,8 +45,8 @@ REDIRECTS = {
   "SEdaily/index.html"                         => "/index.html?utm_campaign=sedaily_2017_podcast&utm_medium=sedaily_podcast&utm_source=sedaily_podcast&utm_content=sed_podcast&utm_term=",
   "govsjenkins/index.html"                      => "/2017/04/25/gocd-over-jenkins/index.html",
   "gocdvsjenkins/index.html"                    => "/2017/04/25/gocd-over-jenkins/index.html",
-  "jenkins/index.html"                          => "/2017/04/25/gocd-over-jenkins/index.html",
-
+  "arrested/index.html"                         => "/index.html?utm_campaign=arrested_ops_2017&utm_medium=podcast&utm_source=podcast_arrested&utm_content=go_website&utm_term=",
+  "spinnaker/index.html"                         => "/2017/07/10/gocd-vs-spinnaker/index.html"
   }
 #To ignore HtmlCheck for URL's with &, update file_ignore options in lib/tasks/static_checks.rake
 activate :sprockets
@@ -79,8 +79,19 @@ activate :s3_sync do |s3_sync|
   s3_sync.prefer_gzip  = false
 end
 
-caching_policy 'text/html', max_age: 600, must_revalidate: true
-default_caching_policy      max_age:(60 * 60 * 24 * 365)
+# these files have long lived cache haaders
+assets = []
+assets += %w(css js)
+assets += %w(png svg gif jpg jpeg ico)
+assets += %w(eot ttf woff woff2)
+assets += %w(mov avi)
+assets.each do |file_type|
+  MIME::Types.type_for(file_type).each do |mime|
+    caching_policy mime.content_type, max_age: (60 * 60 * 24 * 365)
+  end
+end
+
+default_caching_policy  max_age: 600, must_revalidate: true
 
 # Build-specific configuration
 configure :build do

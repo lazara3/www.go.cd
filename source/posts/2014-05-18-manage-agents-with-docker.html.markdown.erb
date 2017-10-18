@@ -6,8 +6,8 @@ author: Ken Mugrage
 excerpt: "Ken Mugrage talks about running GoCD agents using Docker, and being able to destroy them as needed"
 summary_image: "/assets/images/blog/manage-agents-with-docker/small_h.png"
 title_tag_of_header: "Using GoCD and Docker to manage agents | GoCD Blog"
-meta_description: "GoCD is open source continuous delivery software. Learn how to use Docker to create and destroy build agents inorder to have a flexible continuous delivery setup."
-meta_keywords: "GoCD, continuous delivery, continuous delivery software, continuous integration, continuous integration software, go, goforcd, open source, docker, agents, flexible"
+meta_description: "Learn how to use Docker to create and destroy build agents inorder to have a flexible continuous delivery setup."
+meta_keywords: "docker, agents, elastic agents, open source continuous delivery, continuous delivery software, open source continuous integration, continuous integration software"
 ---
 
 **[Update: As of the end of 2015, it might be better to use the GoCD Docker images available on [Docker Hub](https://hub.docker.com/r/gocd/) as they are newer and better maintained and used by many in the GoCD community]**
@@ -51,7 +51,7 @@ program against this file, but I used a shell script so that I could call it fro
 
 Update on 22 June - The Dockerfile has been updated to use wget to download
 the GoCD 14.1 agent debian installer. If you need the RPM version visit 
-www.gocd.io/download and change the Dockerfile to match your system.
+www.gocd.org/download and change the Dockerfile to match your system.
 
 - __go-agent__
 
@@ -73,7 +73,7 @@ agents for me, they won't be able to connect if you don't make this match your G
 - __autoregister.properties__
 
 This file takes advantage of the autoregister feature in GoCD so that I don't have to manually approve the new agents. You'll 
-need to update the key based on the instructions at [https://docs.gocd.io/current/advanced_usage/agent_auto_register.html](https://docs.gocd.io/current/advanced_usage/agent_auto_register.html)
+need to update the key based on the instructions at [https://docs.gocd.org/current/advanced_usage/agent_auto_register.html](https://docs.gocd.org/current/advanced_usage/agent_auto_register.html)
 
 - __build\_docker\_image.sh__
 

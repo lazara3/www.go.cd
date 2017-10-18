@@ -1,13 +1,20 @@
 <div class='subscribe-to-blog'>
-   <div class='subscribe-title'>
-     <p>Subscribe to the GoCD blog</p>
-   </div>
-   <div>
-     Subscribe and stay connected with the GoCD Blog. We send a monthly update of what's new in the world of continuous delivery, devops and software development practices.
-   </div>
-   <div>
-     <script src="//app-e.marketo.com/js/forms2/js/forms2.min.js"></script>
-     <form id="mktoForm_5414"></form>
-     <script>MktoForms2.loadForm("//app-e.marketo.com", "199-QDE-291", 5414);</script>
-   </div>
+<div class="row">
+  <div class="col-md-4">
+   <h3 class='subscribe-title'> Subscribe to The Pipeline</h3>
+   <p>Continuous Delivery news in your inbox</p>
+  </div>
+  <div class="col-md-6">
+    <div id="subscribe-info">
+      Send us a mail to <a href="mailto:support@thoughtworks.com?subject=Sign%20me%20up%20for%20GoCD%20blog%20notifications">support@thoughtworks.com</a> and we will sign you up for a notification on new blog posts.
+    </div>
+    <script type="text/javascript">
+      function initMarketoForm() {
+        jQuery("#subscribe-info").html("<form id='mktoForm_5414'></form>");
+        MktoForms2.loadForm("//app-e.marketo.com", "199-QDE-291", 5414);
+      }
+    </script>
+    <script async="true" src="//app-e.marketo.com/js/forms2/js/forms2.min.js" onload="initMarketoForm()"></script>
+  </div>
+</div>
 </div>

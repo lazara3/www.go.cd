@@ -1,7 +1,7 @@
 ---
 title: "What's new?"
 title_tag_of_header: "Releases - Version notes | GoCD"
-meta_description: "Description of key new features, known bugs and enhancements for versions of GoCD. GoCD is open source continuous delivery software. We help organizations deliver high quality software through automation."
+meta_description: "Description of key new features, known bugs, and enhancements for versions of GoCD."
 meta_keywords: "GoCD, continuous delivery, goforcd, open source, software, contribute to open source, agile continuous delivery, code contribution, releases, version, release notes, Go"
 ---
 <div class="inner-banner">
@@ -16,7 +16,7 @@ meta_keywords: "GoCD, continuous delivery, goforcd, open source, software, contr
 
 <div class="container">
   <p>
-    Check out "Enhancements" and "Bug fixes" for specific versions of Go below. As always, feel free to tell us what you think, or file a bug on <a href="https://github.com/gocd/gocd/issues/new" target="_blank">GitHub</a>.
+    Check out "Enhancements" and "Bug fixes" for specific versions of GoCD below. As always, feel free to tell us what you think, or file a bug on <a href="https://github.com/gocd/gocd/issues/new" target="_blank">GitHub</a>.
   </p>
   <p>
     <span>We try our best to credit all contributors. Apologies if we miss you out. Let us know and we will change this.</span>
@@ -28,15 +28,15 @@ meta_keywords: "GoCD, continuous delivery, goforcd, open source, software, contr
   <% end.sort.reverse.collect(&:to_s) %>
 
   <div class="v-tabs all-releases">
-    <ul class="tabs">
+    <ul class="tabs tab-container-marker">
       <%  releases.each_with_index do |release, index| %>
-      <li rel="tab-<%= release.gsub('.', '-') %>"<%= ' class="active"' if index == 0 %>><%= release %><%= ' (latest)' if index == 0 %></li>
+      <li rel="tab-<%= release.gsub('.', '-') %>" class="tab-marker<%= ' active' if index == 0 %>"><%= release %><%= ' (latest)' if index == 0 %></li>
       <% end %>
     </ul>
 
-    <div class="tab_container">
+    <div class="tab_container tab-container-marker">
       <%  releases.each_with_index do |release, index| %>
-      <h3 class="tab-accordion_heading<%= ' d_active' if index == 0 %>" rel="tab-<%= release.gsub('.', '-')%>"><%= release %><%= ' (latest)' if index == 0 %></h3>
+      <h3 class="tab-marker tab-accordion_heading<%= ' d_active' if index == 0 %>" rel="tab-<%= release.gsub('.', '-')%>"><%= release %><%= ' (latest)' if index == 0 %></h3>
       <div id="tab-<%= release.gsub('.', '-')%>" class="tab_content" style="display: block;">
         <div class="content">
           <%= partial "partials/release_notes/release-#{release.gsub('.', '-')}" %>
@@ -50,6 +50,6 @@ meta_keywords: "GoCD, continuous delivery, goforcd, open source, software, contr
 </main>
 <script>
 jQuery(document).ready(function($) {
-  startTabContainer($);
+  startTabContainer();
 });
 </script>

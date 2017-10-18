@@ -1,0 +1,59 @@
+- name: File based plugin
+  description: Bundled plugin to support password file based authentication.
+  readmore_url: https://github.com/gocd/filebased-authentication-plugin
+  author_url: http://www.thoughtworks.com/products/
+  author_name: ThoughtWorks Inc.
+  github_stars: http://ghbtns.com/github-btn.html?user=gocd&repo=filebased-authentication-plugin&type=watch&count=true
+  bundled: true
+
+- name: LDAP/AD plugin
+  description: Bundled plugin to support LDAP/AD authentication.
+  readmore_url: https://github.com/gocd/gocd-ldap-authentication-plugin
+  author_url: http://www.thoughtworks.com/products/
+  author_name: ThoughtWorks Inc.
+  github_stars: http://ghbtns.com/github-btn.html?user=gocd&repo=gocd-ldap-authentication-plugin&type=watch&count=true 
+  bundled: true
+
+- name: LDAP/AD Authorization Plugin
+  description: GoCD LDAP/AD Plugin provides authentication and authorization services
+  readmore_url: https://extensions-docs.gocd.org/ldap/current/
+  author_url: https://www.thoughtworks.com/products/
+  author_name: ThoughtWorks Inc.
+  contact_url: https://www.thoughtworks.com/go/#pricing
+  paid: true
+  
+- name: Atlassian Crowd Authentication Plugin
+  description: Delegates authentication services to Atlasian Crowd
+  readmore_url: https://github.com/mgambini/crowd-integration-plugin
+  author_url: http://www.ditechonline.it/
+  author_name: Di.Tech S.p.A.
+  releases_url: https://github.com/mgambini/crowd-integration-plugin/releases
+  contact_url: mailto:marco.gambini@ditechspa.it?subject=Info about Crowd Authentication Plugin
+  paid: false
+
+- name: GitHub OAuth authorization plugin
+  description: The plugin allows user to login in GoCD using GitHub(or GitHub Enterprise).
+  readmore_url: https://github.com/gocd-contrib/github-oauth-authorization-plugin
+  author_url: https://github.com/gocd-contrib
+  author_name: GoCD Contributors
+  releases_url: https://github.com/gocd-contrib/github-oauth-authorization-plugin/releases
+  github_stars: http://ghbtns.com/github-btn.html?user=gocd&repo=github-oauth-authorization-plugin&type=watch&count=true
+  paid: false
+
+- name: Google OAuth authorization plugin
+  description: The plugin allows user to login in GoCD using a Google account.
+  readmore_url: https://github.com/gocd-contrib/google-oauth-authorization-plugin
+  author_url: https://github.com/gocd-contrib
+  author_name: GoCD Contributors
+  releases_url: https://github.com/gocd-contrib/google-oauth-authorization-plugin/releases
+  github_stars: http://ghbtns.com/github-btn.html?user=gocd-contrib&repo=google-oauth-authorization-plugin&type=watch&count=true
+  paid: false
+
+- name: TLS Client Certificate Authentication plugin
+  description: Using headers set by a TLS-terminating reverse proxy, details from a client certificate are used to log in
+  readmore_url: https://github.com/cnorthwood/gocd-tls-auth
+  author_url: https://cjn.me.uk/
+  author_name: Chris Northwood
+  releases_url: https://github.com/cnorthwood/gocd-tls-auth/releases
+  github_stars: http://ghbtns.com/github-btn.html?user=cnorthwood&repo=gocd-tls-auth&type=watch&count=true
+  paid: false

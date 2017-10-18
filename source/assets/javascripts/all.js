@@ -3,9 +3,11 @@
 //= require 'lib/_masonry.pkgd'
 //= require 'lib/_handlebars-v4.0.5'
 //= require 'lib/_ramda'
+//= require 'lib/_jquery.chocolat'
 //= require 'bootstrap-sprockets'
 
 //= require 'app/_main'
+//= require 'app/_download_new'
 //= require 'app/_download'
 //= require 'app/_getting_started'
 //= require 'app/_tabs'
