@@ -4,7 +4,7 @@ title_tag_of_header: "Open Source Continuous Delivery and Automation Server | Go
 meta_description: "GoCD is an open source continuous delivery serve that helps organizations increase productivity and deliver high quality through automation."
 meta_keywords: "GoCD, continuous delivery, continuous delivery tool, continuous integration, continuous integration software, open source, automated release management, automation, software deployment"
 ---
-<div class="banner">
+<!-- <div class="banner">
   <div class="banner-content">
     <h1 class="caption">
     <span>Simplify<br>Continuous<br>Delivery</span>
@@ -15,77 +15,74 @@ meta_keywords: "GoCD, continuous delivery, continuous delivery tool, continuous 
     </p>
     <%= link_to 'Download Now', "/download/index.html", {:class => "btn btn-primary btn-download", "analytics-label" => "home-download-cta"} %>
   </div>
+</div> -->
 
+<div class="home-hero">
+  <div class="home-hero-content">
+    <div class="home-hero-headline">
+      <h1>Simplify<br>Continuous Delivery</h1>
+      <h2>Open source continuous delivery server to model and visualize complex workflows with ease.</h2>
+      <a href="http://www.gocd.org" class="home-download-button">Download Now</a>
+    </div>
+  </div>
 </div>
 
-<div class="test-grid">
-  <div class="test-grid-1">
-    <p>Automate and streamline your build-test-release cycle for reliable, continuous delivery of your product.</p>
-  </div>
+<div class="tagline">
+    <h1>Automate and streamline your build-test-release cycle for reliable, continuous delivery of your product.</h1>
 </div>
 
 
 <div class="feature-row">
   <div class="feature-col">
     <h3>Model complex workflows</h3>
-    <div class="feature-1-image"></div>
+      <div class="feature-image-container">
+        <div class="feature-image-1">
+          <%= image_tag "icons/go.cd_model-complex-workflows.svg", {:title => "model complex workflows", :alt => "Model Complex Workflows"} %>
+        </div>
+      </div>
     <p>With its parallel and sequential execution, GoCD can easily configure dependencies for fast feedback and on-demand deployment. Its fan-in/fan-out dependency management always does the "right thing," avoiding spurious builds.</p>
   </div>
   <div class="feature-col">
     <h3>Easily compare builds</h3>
-    <div class="feature-2-image"></div>
+      <div class="feature-image-container">
+        <div class="feature-image-2">
+          <%= image_tag "icons/go.cd_compare-builds.svg", {:title => "easily compare builds", :alt => "Easily Compare Builds"} %>
+        </div>
+      </div>
     <p>GoCD's ability to compare content - both files and commit messages - across any two arbitrary builds, makes it invaluable when troubleshooting a broken pipeline.</p>
   </div>
 
    <div class="feature-col">
     <h3>Clearly visualize your workflow</h3>
-    <div class="feature-3-image"></div>
+      <div class="feature-image-container">
+        <div class="feature-image-3">
+          <%= image_tag "icons/go.cd_see-how-things-really-work.svg", {:title => "visualize your workflow", :alt => "Visualize Your Workflow"} %>
+        </div>
+      </div>
     <p>GoCD's Value Stream Map visualizes your end-to-end workflow in real time. Every change can be tracked from commit to deploy and back again.</p>
   </div>
-
-
 </div>
 
+<div class="plugins-row">
+  <div class="plugins-wrapper">
+    <div class="plugins-image">
+      <%= image_tag "icons/go.cd_plugins.svg", {:title => "GoCD open source plugins", :alt => "GoCD open source plugins"} %>
+    </div>
+    <div class="plugins-text">
+      <h3>Plugins</h3>
+      <p>GoCD has extension points for which plugins can be created. There are <%= link_to 'numerous plugins', '/plugins/index.html', "analytics-label" => "link_homepage_plugins" %> already available, or if you don't see what you need, you can <%= link_to 'write your own', 'https://developer.gocd.org/current/writing_go_plugins/go_plugins_basics.html', "analytics-label" => "link_homepage_plugin_writing_docs" %>.</p>
+    </div>
+  </div>
 
-<div class="plugins-community">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="row plugins-cont">
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <figure>
-              <%= image_tag "icons/go.cd_plugins.svg", {:title => "GoCD open source plugins", :alt => "GoCD open source plugins"} %>
-            </figure>
-          </div>
-          <div class="col-xs-9 col-sm-9 col-md-9">
-            <h3>Plugins</h3>
-            <p>
-              GoCD has extension points for which plugins can be created. There are
-              <%= link_to 'numerous plugins', '/plugins/index.html', "analytics-label" => "link_homepage_plugins" %> already available, or if you don't see
-              what you need, you can <%= link_to 'write your own', 'https://developer.gocd.org/current/writing_go_plugins/go_plugins_basics.html',
-                                         "analytics-label" => "link_homepage_plugin_writing_docs" %>.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="row community-cont">
-          <div class=" col-xs-3 col-sm-3 col-md-3">
-            <figure>
-              <%= image_tag "icons/go.cd_community.svg", {:title => "GoCD open source community", :alt => "GoCD open source community"}  %>
-            </figure>
-          </div>
-          <div class="col-xs-9 col-sm-9 col-md-9">
-            <h3>Community</h3>
-            <p>
-              GoCD's community is 1000 members strong and growing. Through our active forum, users and contributors share best practices and
-              openly discuss a wide range of topics including product how-tos. To join in the
-              conversation visit <a href="https://groups.google.com/forum/#!forum/go-cd" analytics-label="link_homepage_google_group" >our Google group.</a>
-            </p>
-          </div>
-        </div>
-      </div>
+  <div class="plugins-wrapper">
+    <div class="plugins-image">
+    <%= image_tag "icons/go.cd_community.svg", {:title => "GoCD open source community", :alt => "GoCD open source community"} %>
+    </div>
+    <div class="plugins-text">
+      <h3>Community</h3>
+      <p>GoCD's community is 1000 members strong and growing. Through our active forum, users and contributors share best practices and openly discuss a wide range of topics including product how-tos. To join in the conversation visit<a href="https://groups.google.com/forum/#!forum/go-cd" analytics-label="link_homepage_google_group"> our Google group</a>.</p>
     </div>
   </div>
 </div>
+
 <%= partial "partials/supportbanner" %>

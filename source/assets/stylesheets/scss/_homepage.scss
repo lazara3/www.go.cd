@@ -1,303 +1,324 @@
 
-
-.test-grid {
-  @include grid-container;
-}
-
-.test-grid-1 {
-  @include grid-column(12);
-}
+body { 
 
 
-.feature-row {
-	@include grid-container;
+	//banner
 
-	.feature-col {
-		@include grid-column(4);
+	// .banner {
+	// 	background-image: url("/assets/images/experiment/bkgd1.png");
+	// 	background-position: center 0;
+	// 	background-repeat: no-repeat;
+	// 	height: 250px;
+	// 	position: relative;
+	// 	overflow: hidden;
 
-		text-align: center;
+	// 	.banner-content {
+	// 		position: relative;
+	// 		top: 40%;
+	// 		min-width: 300px;
+	// 		max-width: 300px;
+	// 		left: 50%;
+	// 		text-align: center;
+	// 		// transform: translate(-50%, -62%);
+	// 		// background: rgba(0, 0, 0, 0.63);
+	// 		// font-weight: 400;
+	// 		width: 880px;
+	// 		max-width: 880px;
+	// 		transform: translate(-50%, -50%);
+	// 	}
 
-		h3 {
-			padding-bottom: 1em;
-		}
+	// 	.caption {
+	// 		color: #ffffff;
+	// 		font-family: 'URWGeometric-Heavy';
+	// 		font-size: 150px;
+	// 		text-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+	// 		text-transform: uppercase;
+	// 		line-height: 90%;
 
-		.feature-1-image {
-			width: auto;
-			height: 200px;
-			content: url("/assets/images/icons/go.cd_model-complex-workflows.svg");
-			padding-bottom: 1em;
-		}
+	// 		span {
+	// 			display: inline-block;
+	// 			margin-right: 10px;
 
-		.feature-2-image {
-			width: 100%;
-			height: 200px;
-			content: url("/assets/images/icons/go.cd_compare-builds.svg");
-			padding-bottom: 1em;
-		}
+	// 			@media (min-width:$screen-tablet) {
+	// 				margin-right: 20px;
+	// 			}
 
-		.feature-3-image {
-			width: auto;
-			height: 200px;
-			content: url("/assets/images/icons/go.cd_see-how-things-really-work.svg");
-			padding-bottom: 1em;
-		}
-	}
-}
+	// 			&:last-child {
+	// 				margin-right: 0;
+	// 			}
 
+	// 		}
 
-//banner
+	// 	}
 
-.banner {
-	background-image: url("/assets/images/experiment/bkgd1.png");
-	background-position: center 0;
-	background-repeat: no-repeat;
-	background-color: #333;
-	height: 250px;
-	position: relative;
-	overflow: hidden;
+	// 	.subcaption {
+	// 		color: #fff;
+	// 		font-weight: 300;
+	// 		display: inline-block;
+	// 		text-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+	// 		padding: 0px 20px 0px 0px;
+	// 		font-size: 34px;
+	// 		line-height: 110%;
+	// 		width: 92%;
+	// 	}
 
-	// @media (min-width:$screen-tablet) {
-	// 	height: 500px;
-	// 	background-image: url('/assets/images/experiment/bkgd1.png');
-	// 	background-size: initial;
 	// }
 
-	// @media (min-width:1025px) {
-	// 	background-image: url('/assets/images/experiment/bkgd1.png');
-	// 	height: 750px;
-	// }
 
-	// @media (min-width:$screen-lg-desktop) {
-	// 	background-image: url('/assets/images/experiment/bkgd1.png');
-	// 	background-size: cover;
-	// }
+	// Home Hero
 
-	.banner-content {
-		position: relative;
-		top: 40%;
-		min-width: 300px;
-		max-width: 300px;
-		left: 50%;
-		text-align: center;
-		// transform: translate(-50%, -62%);
-		// background: rgba(0, 0, 0, 0.63);
-		// font-weight: 400;
-		width: 880px;
-		max-width: 880px;
-		transform: translate(-50%, -50%);
-	}
+	.home-hero {
+		background-image: url("/assets/images/experiment/bkgd1.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 700px;
+		margin-bottom: 2em;
 
-	.caption {
-		color: #ffffff;
-		font-family: 'URWGeometric-Heavy';
-		font-size: 150px;
-		text-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
-		text-transform: uppercase;
-		line-height: 90%;
+		border: 1px solid blue;
 
-		span {
-			display: inline-block;
-			margin-right: 10px;
+		.home-hero-content {
+			@include grid-container;
+			height: 100%;
 
-			@media (min-width:$screen-tablet) {
-				margin-right: 20px;
+			border: 1px solid green;
+
+			.home-hero-headline {
+				@include grid-column(6);
+				@include grid-shift(3);
+
+				margin: 5em 0 0 0;
+				padding: 1em 2em 3em 2em;
+				border: 1px solid red;
+				background-color: hsla(0,0%,0%,0.3);
+
+				h1 {
+					color: #FFFFFF;
+					font-family: 'URWGeometric-semibold';
+					font-size: 6em;
+					text-align: center;
+					text-transform: uppercase;
+					line-height: .9em;
+				}
+
+				h2 {
+					color: #FFFFFF;
+					font-family: 'URWGeometric-light';
+					font-size: 2em;
+					text-align: center;
+					padding: 0 0 1em 0;
+				}
+
+				.home-download-button {
+					display: block;
+					height: 60px;
+					width: 100%;
+					padding: .7em 0 0 0;
+					
+					background-color: #94399E;
+
+					font-family: 'URWGeometric-semibold';
+					font-size: 2em;
+					color: #FFFFFF;
+					text-align: center;
+
+
+				}
 			}
-
-			&:last-child {
-				margin-right: 0;
-			}
-
 		}
-
 	}
 
-	.subcaption {
-		color: #fff;
-		font-weight: 300;
-		display: inline-block;
-		text-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
-		padding: 0px 20px 0px 0px;
-		font-size: 34px;
-		line-height: 110%;
-		width: 92%;
-	}
+	// Tagline
 
-}
+	.tagline {
+		@include grid-container;
 
-//Everything is absolutely positioned! This defeats the purpose of responsive design.
+		margin-bottom: 2em;
 
-.btn-download {
-	margin: 10px auto 0;
-	position: absolute;
-	left: 0;
-	bottom: -40px;
-	width: 300px;
-	background-color: rgba(0,0,0,.6);
-	border: none;
+		h1 {
+			@include grid-column(6);
+			@include grid-shift(3);
 
-	// @media (min-width:$screen-tablet) {
-	// 	width: 575px;
-	// 	padding: 10px;
-	// 	font-size: 27px;
-	// 	bottom: -70px;
-	// }
-
-	// @media (min-width:$screen-desktop) {
-	// 	width: 775px;
-	// 	position: absolute;
-	// 	left: 0;
-	// 	bottom: -70px;
-	// }
-
-	// @media (min-width:$screen-lg-desktop) {
-	// 	width: 880px;
-	// 	position: absolute;
-	// 	left: 0;
-	// 	bottom: -70px;
-	// }
-
-}
-
-.btn-readmore {
-	border: 1px solid #ccc;
-	padding: 5px 15px;
-	border-radius: 3px;
-}
-
-.bigtxt {
-	font-size: 18px;
-	font-weight: 400;
-	margin: 0px auto;
-	text-align: center;
-
-	// @media (min-width:$screen-tablet) {
-	// 	margin: 0 auto 30px auto;
-	// 	padding: 30px 5%;
-	// 	font-size: 25px;
-	// 	line-height: 34px;
-	// 	max-width: 100%;
-	// }
-
-	// @media (min-width:$screen-desktop) {
-	// 	padding: 30px 10%;
-	// }
-
-	// @media (min-width:$screen-lg-desktop) {
-	// 	line-height: 45px;
-	// 	margin: 0 auto 30px auto;
-	// 	padding: 50px 15%;
-	// 	font-size: 32px;
-	// 	max-width: 90%;
-	// 	// background: transparent;
-	// }
-
-}
-
-
-
-.plugins-community {
-	background: #f5f5f5;
-	padding: 30px 0;
-
-	figure {
-		margin-top: 20px;
-
-		img {
-			max-width: 80%;
-
-			@media (min-width:$screen-tablet) {
-				width: 100px
-			}
-
-		}
-
-	}
-
-}
-
-.plugins-cont {
-	margin-bottom: 30px;
-}
-
-.support,
-.eventsbanner,
-.downloadbanner {
-	margin: 30px 0;
-}
-
-.go-support,
-.banner-with-cta {
-	border: 1px solid $primary-color;
-	overflow: hidden;
-	margin: 0 auto;
-	@extend %flexbox;
-	@include justify-content(flex-start);
-	@include align-items(center);
-	@include flex-direction(column);
-
-	@media (min-width:$screen-tablet) {
-		@include flex-direction(row);
-		padding: 0px 0 0;
-	}
-
-	a {
-		background: $primary-color;
-
-		&:hover {
-			background-color: #712b79;
-		}
-
-	}
-
-	p {
-		font-weight: 400;
-		font-size: 13px;
-		text-transform: uppercase;
-		padding: 0 20px;
-		margin: 0;
-
-		@media (max-width:$screen-xs-max) {
 			text-align: center;
-			padding: 20px;
+			font-family: 'URWGeometric-semibold';
 		}
-
-		@media (min-width:$screen-tablet) {
-			font-size: 16px;
-			width: 70%;
-		}
-
-		@media (min-width:$screen-desktop) {
-			font-size: 18px;
-			width: 85%;
-		}
-
 	}
 
-	a {
-		text-transform: uppercase;
-		font-weight: 700;
-		font-size: 20px;
-		padding: 21px;
-		color: #fff;
-		width: 100%;
+
+
+	// Features
+
+	.feature-row {
+		@include grid-container;
+		border: 1px solid red;
+		margin: 0 0 3em 0;
+
+		.feature-col {
+			@include grid-column(3);
+			@include grid-shift(1.5);
+			border: 1px solid green;
+
+
+			h3 {
+				text-align: center;
+				padding-bottom: 1em;
+			}
+
+			.feature-image-container {
+				height: 180px;
+
+				.feature-image-1 {
+					display: block;
+					margin: auto;
+					width: 60%
+				}
+
+				.feature-image-2 {
+					display: block;
+					margin: auto;
+					padding-top: 2em;
+					width: 70%
+				}
+
+				.feature-image-3 {
+					display: block;
+					margin: auto;
+					padding-top: 1em;
+					width: 70%
+				}
+			}
+
+			p {
+				text-align: left;
+			}
+		}
+	}
+
+	// New Plugins Row
+
+	.plugins-row {
+		@include grid-container;
+
+		padding: 2em 0 2em 0;
+		margin: 0 0 2em 0;
+		background-color: #EEEEEE;
+
+
+		.plugins-wrapper {
+			@include grid-column(4);
+			@include grid-shift(2);
+
+			border: 1px solid red;
+
+
+			display: flex;
+
+
+			.plugins-image {
+				padding: 1em 1em 0 0;
+				margin: 0 0 2em 0;
+				width: 25%;
+			}
+
+			.plugins-text {
+				width: 75%;
+
+				h3 {
+					text-align: left;
+				}
+
+				p {
+					text-align: left;
+				}
+			}
+		}
+	}
+
+	//Everything is absolutely positioned.
+
+	.btn-download {
+		margin: 10px auto 0;
+		position: absolute;
+		left: 0;
+		bottom: -40px;
+		width: 300px;
+		background-color: rgba(0,0,0,.6);
+		border: none;
+	}
+
+	.go-support {
+		border: 1px solid $primary-color;
+		overflow: hidden;
 		margin: 0 auto;
-		display: block;
-		text-align: center;
-		background-color: $primary-color;
+		@extend %flexbox;
+		@include justify-content(flex-start);
+		@include align-items(center);
+		@include flex-direction(column);
 
 		@media (min-width:$screen-tablet) {
-			width: 30%;
-			padding: 40px;
+			@include flex-direction(row);
+			padding: 0px 0 0;
 		}
 
-		@media (min-width:$screen-desktop) {
-			width: 25%;
+		a {
+			background: $primary-color;
+
+			&:hover {
+				background-color: #712b79;
+			}
+
+		}
+
+		p {
+			font-weight: 400;
+			font-size: 13px;
+			text-transform: uppercase;
+			padding: 0 20px;
+			margin: 0;
+
+			@media (max-width:$screen-xs-max) {
+				text-align: center;
+				padding: 20px;
+			}
+
+			@media (min-width:$screen-tablet) {
+				font-size: 16px;
+				width: 70%;
+			}
+
+			@media (min-width:$screen-desktop) {
+				font-size: 18px;
+				width: 85%;
+			}
+
+		}
+
+		a {
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 20px;
+			padding: 21px;
+			color: #fff;
+			width: 100%;
+			margin: 0 auto;
+			display: block;
+			text-align: center;
+			background-color: $primary-color;
+
+			@media (min-width:$screen-tablet) {
+				width: 30%;
+				padding: 40px;
+			}
+
+			@media (min-width:$screen-desktop) {
+				width: 25%;
+			}
+
+		}
+
+		.go {
+			text-transform: none;
 		}
 
 	}
-
-	.go {
-		text-transform: none;
-	}
-
 }
