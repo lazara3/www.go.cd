@@ -14,12 +14,13 @@ show_features: true
     <div class="container feature-section">
       <h1>ADD-ONS</h1>
     </div>
+
     <div class="container intro-section">
       <div class="row intro-row">
-        <div class="col-md-7 vsm-illo">
+        <div class="col-md-6">
           <%= image_tag "campaign/enterprise/ui_illo_commercial_2.svg", {:title => "GoCD illustration", :alt => "GoCD Value Stream Map"} %>
         </div>
-        <div class="col-md-5 intro-text">
+        <div class="col-md-6 intro-text">
           <h1>Analytics Plugin</h1>
           <p>
             The GoCD Enterprise Analytics Plugin provides actionable insights about your release workflow, pipeline status and infrastructure utilization. With this, you can easily gain visibility into your release pipeline, identify and remove bottlenecks and optimize resources for best throughput. </p>
@@ -30,9 +31,49 @@ show_features: true
           </p>
         </div>
       </div>
-  
     </div>
 
-    <script src="/assets/javascripts/marketo_popover.js"></script>
+    <div class="container feature-section"\>
+      <div class="col-md-6">
+        <h2> PostgreSQL</h2>
+        <p>
+          GoCD's OSS distribution uses an embedded database. That's great for getting started. But, if you need to scale beyond a few teams and several pipelines, our PostgreSQL add-on gives you the performance upgrade necessary for hundreds of pipelines and agents. We recommend PostgreSQL for critical deployments.
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <h2> Business Continuity</h2>
+        <p>
+          Hard drives fail. This add-on helps ensure you can deliver even when your machine is down. With business continuity, you’ll be able to set up secondary GoCD and PostgreSQL servers to protect against downtime. Automatic redirection of build agents and the ability to store artifacts on network drives is supported.
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Amazon ECS Elastic Agent Plugin</h2>
+        <p>
+          This Elastic Agent Plugin for Amazon EC2 Container Service gives you the flexibility to autoscale your builds on docker instances running on an ECS cluster. It tailors your use of EC2 instances (with support for Docker containers) specific to your needs, by taking care of creating agents & scheduling builds while monitoring the ECS cluster, allowing you to optimize your utilization and reduce costs.
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <h2>LDAP/AD Authorization Plugin</h2>
+        <p>
+          The LDAP/AD Authorization Plugin provides both authentication and authorization services for GoCD. Grant relevant access to your teams by leveraging your organizations' predefined roles within LDAP/AD. Manage users and roles centrally (LDAP), while using GoCD to define and maintain application specific role based access.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="container support-container">
+      <h2 class="text-center">ALL TIERS OF SUPPORT INCLUDE</h2>
+      <ul>
+        <li> Unlimited support cases per month. </li>
+        <li> Urgent Severity Isssues response within 1 Busieness Hour. </li>
+        <li> Standard Busieness Hour for support, plus 24x5 for Urgent Severity Issues. </li>
+        <li> Urgent Bug Escalation & Hot Fix. </li>
+        <li> Access to Development Team Forums. </li>
+      </ul>
+    </div>
+
   <% end %>
 </div>
