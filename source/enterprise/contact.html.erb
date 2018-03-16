@@ -11,16 +11,88 @@ show_features: true
 <div class="enterprise">
   <% content_for :maincontent do %>
     <%= partial 'partials/secondarynav' %>
-    <div class="header">
-      <h1>Contact</h1>
+    <div class="container">
+      <div class="img-container">
+        <img class="img-responsive" src="http://via.placeholder.com/800x300">
+      </div>
     </div>
-    <section class="image-text-con">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="text-container container">
+        <p class="bold-text">Intrested in our enterprise offering?</p>
+        <p class="bold-text">Connect with us so we can learn more about how to help you.</p>
+        <p class="bold-text">You can also email us directly at support@thoughtworks.com</p>
+      </div>
+      </div>
 
-    </section>
-    <section class="">
+      <div class="col-md-5">
+        <form class="form">
+          <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Title</label>
+              <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Title</label>
+              <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Title</label>
+              <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Title</label>
+              <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Title</label>
+              <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Title</label>
+              <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Title</label>
+              <input type="text" class="form-control">
+          </div>
+          <button class="btn btn-default btn-lg center-align">Submit</button>
+        </form>
+      </div>
 
-    </section>
+    </div>
+    
+    <div class="container">
+        <hr/>
+      <h2 class="text-center">You can also reach us at..</h2>
 
+      <div class="row">
+        <div class="col-md-4">
+          <p class="bold-text text-center">America Hours</p>
+          <p class="text-center bold-text">+1 415 463 1900</p>
+          <img class="img-responsive img-circle" src="http://via.placeholder.com/120x120">
+          <p class="text-center bold-text">Craig</p>
+        </div>
+
+        <div class="col-md-4">
+            <p class="bold-text text-center">Europe Hours</p>
+            <p class="text-center bold-text">+44 (0) 20 7497 4500</p>
+            <img class="img-responsive img-circle" src="http://via.placeholder.com/120x120">
+            <p class="text-center bold-text">Alagu</p>
+        </div>
+
+        <div class="col-md-4">
+            <p class="bold-text text-center">Asia, Australia & Africa Hours</p>
+            <p class="text-center bold-text">+91 80 4323 3722</p>
+            <img class="img-responsive img-circle" src="http://via.placeholder.com/120x120">
+            <p class="text-center bold-text">Rupesh</p>
+        </div>
+
+      </div>
+    </div>
     <script src="/assets/javascripts/marketo_popover.js"></script>
   <% end %>
 </div>
