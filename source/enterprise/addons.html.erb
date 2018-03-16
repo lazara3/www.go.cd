@@ -1,0 +1,38 @@
+---
+layout: campaignlanding
+title: "GoCD for your Enterprise"
+title_tag_of_header: "Scale your Enterprise with GoCD"
+page_caption:
+meta_description: "GoCD Enterprise Plugins and Support"
+meta_keywords: "Enterprise, pipelines, ldap, postgres, enterprise support, scale your pipelines, continuous delivery"
+show_features: true
+---
+
+<div class="enterprise">
+  <% content_for :maincontent do %>
+    <%= partial 'partials/secondarynav' %>
+    <div class="container feature-section">
+      <h1>ADD-ONS</h1>
+    </div>
+    <div class="container intro-section">
+      <div class="row intro-row">
+        <div class="col-md-7 vsm-illo">
+          <%= image_tag "campaign/enterprise/ui_illo_commercial_2.svg", {:title => "GoCD illustration", :alt => "GoCD Value Stream Map"} %>
+        </div>
+        <div class="col-md-5 intro-text">
+          <h1>Analytics Plugin</h1>
+          <p>
+            The GoCD Enterprise Analytics Plugin provides actionable insights about your release workflow, pipeline status and infrastructure utilization. With this, you can easily gain visibility into your release pipeline, identify and remove bottlenecks and optimize resources for best throughput. </p>
+          <p>
+            The GoCD Enterprise Analytics Plugin provides actionable insights about your release workflow, pipeline status and infrastructure utilization. It answers questions like “How long do pipelines take? 
+            How quickly do we recover from failures? Which jobs are slowest? 
+            Do we need to add more agents?”
+          </p>
+        </div>
+      </div>
+  
+    </div>
+
+    <script src="/assets/javascripts/marketo_popover.js"></script>
+  <% end %>
+</div>

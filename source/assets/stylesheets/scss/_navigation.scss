@@ -4,6 +4,7 @@ $navbutton: #fff;
 $nav-link: #fff;
 $nav-link-hover-bg: $primary-color;
 $menu-color: #fff;
+$secondary-nav-color: #8a8686;
 
 .top .navbtn {
   float: right;
@@ -399,3 +400,32 @@ ul.level1 {
   }
 
 }
+
+.secondarynav{
+  background: $secondary-nav-color;
+
+  .level0{
+    display: block;
+    margin: 0 auto;
+    list-style: none;
+    padding: 10px;
+    width: 70%;
+
+    li{
+      display: inline-block;
+      text-align: center;
+      width: 20%;
+
+      a{
+        color: #fff;
+        transition: all 0.25s;
+        padding: 10px;
+
+        &:hover{
+          border-bottom: 3px solid #fff;
+        }
+        
+      }
+    }
+  }
+} 
