@@ -50,7 +50,7 @@ REDIRECTS = {
   "podcastinit/index.html"                       => "/index.html?utm_campaign=podcastinit_2017&utm_medium=podcast&utm_source=podcast_audio&utm_content=go_website&utm_term=",
   "101/index.html"                               => "/tags/cd-101.html",
   "community/index.html"                         => "https://groups.google.com/forum/#!forum/go-cd",
-  "/enterprise"                                 => "enterprise/overview"
+  "enterprise"                                 => "/enterprise/overview"
     
 }
 #To ignore HtmlCheck for URL's with &, update file_ignore options in lib/tasks/static_checks.rake
