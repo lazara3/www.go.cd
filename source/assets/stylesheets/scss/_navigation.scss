@@ -428,3 +428,17 @@ ul.level1 {
     }
   }
 } 
+
+.mobile-nav{
+  display: block;
+  @media(min-width: $screen-tablet){
+    display: none !important;
+  }
+}
+
+.desktop-nav{
+  display: none;
+  @media(min-width: $screen-tablet){
+    display: block;
+  }
+}
