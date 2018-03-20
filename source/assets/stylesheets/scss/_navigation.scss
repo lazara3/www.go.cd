@@ -403,7 +403,9 @@ ul.level1 {
 
 .secondarynav{
   background: $secondary-nav-color;
-
+  position: fixed;
+  width: 100%;
+  z-index: 11;
   .level0{
     display: flex;
     margin: 0 auto;
