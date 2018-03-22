@@ -2,6 +2,8 @@
   date: January 10th, 1pm CST - Americas
   month: Jan
   day: 10
+  time: 1pm CST
+  location: Americas
   url: https://info.thoughtworks.com/gocd_webinar_us_10_jan_2018.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
 
@@ -9,6 +11,8 @@
   date: January 17th, 11am GMT - Europe/APAC/London
   month: Jan
   day: 17
+  time: 11am GMT
+  location: Europe/APAC/London
   url: https://info.thoughtworks.com/gocd_webinar_17_jan_2018.html.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
 
@@ -16,12 +20,16 @@
   date: January 31st, 11am BST - Europe/APAC/London
   month: Jan
   day: 31
+  time: 11am BST
+  location: Europe/APAC/London
   url: https://info.thoughtworks.com/gocd_webinar_31_jan_2018.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
 
 - title: Live GoCD Demo
   date: February 7th, 1pm CST - Americas
   month: Feb
+  time: 1pm CST
+  location: Americas
   day: 07
   url: https://info.thoughtworks.com/gocd_webinar_us_07_feb_2018.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
@@ -30,6 +38,8 @@
   date: February 14th, 11am BST - Europe/APAC/London
   month: Feb
   day: 14
+  time: 11am BST
+  location: Europe/APAC/London
   url: https://info.thoughtworks.com/gocd_webinar_14_feb_2018.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
 
@@ -37,6 +47,8 @@
   date: February 28th, 11am BST - Europe/APAC/London
   month: Feb
   day: 28
+  time: 11am BST
+  location: Europe/APAC/London
   url: https://info.thoughtworks.com/gocd_webinar_28_feb_2018.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
 
@@ -44,6 +56,8 @@
   date: February 28th, 1pm CST - Americas
   month: Feb
   day: 28
+  time: 1pm CST
+  location: Americas
   url: https://info.thoughtworks.com/gocd_webinar_us_28_feb_2018.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
 
@@ -51,6 +65,8 @@
   date: March 14th, 11am BST - Europe/APAC/London
   month: Mar
   day: 14
+  time: 11am BST
+  location: Europe/APAC/London
   url: https://info.thoughtworks.com/gocd_webinar_14_mar_2018.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
 
@@ -58,6 +74,8 @@
   date: March 28th, 11am BST - Europe/APAC/London
   month: Mar
   day: 28
+  time: 11am BST
+  location: Europe/APAC/London
   url: https://info.thoughtworks.com/gocd_webinar_28_mar_2018.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.
 
@@ -65,5 +83,7 @@
   date: March 28th, 1pm CST - Americas
   month: Mar
   day: 28
+  time: 1pm CST
+  location: Americas
   url: https://info.thoughtworks.com/gocd_webinar_us_28_mar_2018.html
   description: The learning sessions are designed to help you get an overall view of the capabilities of GoCD. Each session is one hour and includes a product overview, demo, and Q&A session.

@@ -325,7 +325,7 @@ ul.level1 {
 .blog .link_blog,
 .help .toplink_help,
 .resources .toplink_help,
-.download .link_download {
+.download .link_download, .enterprise .link_enterprise {
   @media screen and (max-width:$screen-xs-max) {
     color: $primary-color !important;
   }
@@ -431,6 +431,15 @@ ul.level1 {
 
 .mobile-nav{
   display: block;
+
+  li{
+    transition: all 0.25s;  
+
+    &:focus, &:hover{
+      background-color: #c0c0c0;
+    }
+  }
+
   @media(min-width: $screen-tablet){
     display: none !important;
   }

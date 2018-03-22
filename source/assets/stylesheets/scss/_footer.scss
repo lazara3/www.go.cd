@@ -62,7 +62,11 @@ footer {
 	background: #333;
 	padding: 10px 0;
 	position: relative;
+	overflow: hidden;
 
+	@media (min-width: 320px) and(max-width: $screen-lg-min){
+		padding: 0;
+	}
 	h3 {
 		text-align: center;
 		margin: 0 0 30px 0;
@@ -80,27 +84,39 @@ footer {
 		z-index: 2;
 		@include flexbox;
 		@include justify-content(center);
+		@media (min-width: 320px) and (max-width: $screen-lg-min){
+			display: block	
+		}
 	}
 
 	li {
 		display: inline-block;
-		transform: scale(1.1);
+		transform: scale(1);
 		cursor: pointer;
 		padding: 0 10px;
 		margin: 10px;
-	
+		float: left;
+		
 		@media (max-width:$screen-tablet) {
 			border-right: 1px solid #212121;
 		}
-		@media (min-width: 320px) and(max-width: 562px){
+
+		@media (min-width: 320px) and (max-width: $screen-lg-min){
 			margin: 0;
-		}
+			width: 50%;
+			padding: 5px;
+			border-top: 1px solid #212121;
+			border-right: 0px;
 
-		&:first-child {
-			@media (min-width:$screen-tablet) {
-				border-left: 1px solid #212121;
+			&:nth-child(even){
+				border-right: 1px solid #212121;
 			}
-
+			&:first-child{
+				width: 100%;
+			}
+			&:nth-child(4), &:last-child{
+				border-bottom: 1px solid #212121;
+			}
 		}
 
 		&:hover {
@@ -120,8 +136,14 @@ footer {
 		font-size: 9px;
 		font-weight: 400;
 		line-height: normal;
+		transition: all 0.25s;
 		@media (min-width:$screen-tablet) {
 			font-size: 11px;
+		}
+		@media (min-width: 320px) and (max-width: $screen-lg-min){
+			&:focus{
+				background-color: #484747;
+			}
 		}
 	}
 
@@ -140,13 +162,6 @@ footer {
 
 	span{
 		padding-left: 15px;
-
-		@media (max-width: $screen-desktop){
-			display: block;
-		}
-		@media (min-width: 320px) and (max-width: 562px){
-			padding: 0;
-		}
 	} 
 }
 

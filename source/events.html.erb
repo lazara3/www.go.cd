@@ -21,17 +21,15 @@ meta_keywords: "GoCD, continuous delivery, open source, community, events, learn
     <ul class="demo-list">
       <% data.webinars.each do |webinar| %>
       <li>
-        <a href="<%= webinar.url %>" title="<%= webinar.date %>">
           <div class="box swing">
-            <div class="datebox hover">
-              <span class="month"><%= webinar.month %></span>
-              <span class="date"><%= webinar.day %></span>
+            <div class="datebox">
+              <span class="month"><%= webinar.month %> <%= webinar.day %></span>
+              <span class="time"><%= webinar.time %>
+                <span class="location"><%= webinar.location %></span>
+              </span>
+              <a href="<%= webinar.url %>" class=" button-small">Register</a>
             </div>
           </div>
-        </a>
-        <div class="details">
-          <span class="time"><%= webinar.date %></span>
-        </div>
       </li>
       <% end %>
     </ul>
